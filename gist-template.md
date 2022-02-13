@@ -1,11 +1,15 @@
 # Regex Tutorial
 
 A regex, which is short for regular expression, is a sequence of characters that defines a specific search pattern. When included in code or search algorithms, regular expressions can be used to find certain patterns of characters within a string, or to find and replace a character or sequence of characters within a string. They are also frequently used to validate input.
+Email validation and passwords are a few areas of strings where Regex is widely used to define the constraints. Regular Expressions are provided under java.
 
 
 
 ## Summary
 
+A regular expression can be a single character, or a more complicated pattern.
+
+Regular expressions can be used to perform all types of text search and text replace operations.
 
 For example, the following regular expression can be used to verify that user input is a valid email address:
 
