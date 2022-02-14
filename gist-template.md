@@ -32,12 +32,30 @@ Each component of this regex has a unique responsibility to make sure that a use
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+* Matching Fixed Strings
+* Matching Special Characters
+* Matching Character Sets
+* Specifying Groups and Fields
+* Evaluating Occurrences
+* Specifying Location
+* Specifying Alternatives
+* Matching Information from a Table
+* Capturing Multiple Lines
+* Managing the Scope of Analysis
 
 ### Anchors
+Anchors are a bit strange in the world of regex; they don't match any characters. What they do is ensure that a regex matches a string at a specific place: the beginning or end of the string or end of a line, or on a word or non-word boundary.
+Anchors provide a way to limit how a regex matches a particular string by telling the regex engine where matches can begin and where they can end.
 
 ### Quantifiers
+Specifies how many instances of a group, character, or character class must be in the input for a match to be found.
+These are some examples of Quantifiers /X./; // matches any character /X*/; // Matches zero or several repetitions of letter X, is short for {0,} /X+-/; // matches one or more repetitions of letter X, is short for {1,} /X?/; // finds no or exactly one letter X, is short for is short for {0,1}. // d{3}; // matches three digits. {} describes the order of the preceding liberal // d{1,4} ; // means d must occur at least once and at a maximum of four
 
 ### OR Operator
+Splits the text with a bar and matches everything to the left or right of the bar. If you want to limit the reach of it you need parenthesis, mostly used with booleans.
+These are some examples of OR Operators
+
+(some truthy expression) || expr expr1 || expr2
 
 ### Character Classes
 
