@@ -60,6 +60,7 @@ These are some examples of OR Operators
 ### Character Classes
 
 ### Flags
+A flag is an optional parameter to a regex that modifies its behavior of searching. A flag changes the default searching behaviour of a regular expression. It makes a regex search in a different way. A flag is denoted using a single lowercase alphabetic character.
 
 ### Grouping and Capturing
 
