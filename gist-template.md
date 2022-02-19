@@ -70,7 +70,8 @@ The character sequences "[.", "[=", and "[:" ( <left-square-bracket> followed by
 
 ### Greedy and Lazy Match
 
-### Boundaries
+A word boundary, in most regex dialects, is a position between \w and \W (non-word char), or at the beginning or end of a string if it begins or ends (respectively) with a word character ( [0-9A-Za-z_] ). So, in the string "-12" , it would match before the 1 or after the 2.
+
 
 ### Back-references
 
