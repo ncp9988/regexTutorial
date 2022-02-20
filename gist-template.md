@@ -57,7 +57,16 @@ These are some examples of OR Operators
 (some truthy expression) || expr expr1 || expr2
 
 ### Character Classes
-
+With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets.
+* ^	Matches the starting position within the string. In line-based tools, it matches the starting position of any line.
+* ( )	Defines a marked subexpression. The string matched within the parentheses can be recalled later (see the next entry, \n). A marked subexpression is also called a block or capturing group.
+* [ ]	A bracket expression. Matches a single character that is contained within the brackets. For example, [abc] matches "a", "b", or "c". [a-z] specifies a range which matches any lowercase letter from "a" to "z". These forms can be mixed: [abcx-z] matches "a", "b", "c", "x", "y", or "z", as does [a-cx-z].
+The - character is treated as a literal character if it is the last or the first (after the ^, if present) character within the brackets: [abc-], [-abc]. Note that backslash escapes are not allowed. The ] character can be included in a bracket expression if it is the first (after the ^) character: []abc].
+* $	Matches the ending position of the string or the position just before a string-ending newline. In line-based tools, it matches the ending position of any line.
+* +	Matches the preceding element one or more times. For example, ab+c matches "abc", "abbc", "abbbc", and so on, but not "ac".
+* \d or [0-9] matches character from 0-9.
+* [a-z]	Match any lowercase character from a to z.
+* {2,6} The preceding element or subexpression must occur between 2 and 6 times, inclusive.
 
 ### Flags
 A flag is an optional parameter to a regex that modifies its behavior of searching. A flag changes the default searching behaviour of a regular expression. It makes a regex search in a different way. A flag is denoted using a single lowercase alphabetic character.
@@ -71,6 +80,7 @@ The character sequences "[.", "[=", and "[:" ( <left-square-bracket> followed by
 ### Greedy and Lazy Match
 Expand the match as far as possible through the text.
 These are some examples of Greedy and Lazy Matching. * + {} - These characters can be used as a quantifier for Greedy or Lazy match.
+
 ### Boundaries
 A word boundary, in most regex dialects, is a position between \w and \W (non-word char), or at the beginning or end of a string if it begins or ends (respectively) with a word character ( [0-9A-Za-z_] ). So, in the string "-12" , it would match before the 1 or after the 2.
 
