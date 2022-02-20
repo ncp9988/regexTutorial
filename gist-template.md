@@ -4,7 +4,6 @@ A regex, which is short for regular expression, is a sequence of characters that
 Email validation and passwords are a few areas of strings where Regex is widely used to define the constraints. Regular Expressions are provided under java.
 
 
-
 ## Summary
 
 A regular expression can be a single character, or a more complicated pattern.
@@ -59,6 +58,7 @@ These are some examples of OR Operators
 
 ### Character Classes
 
+
 ### Flags
 A flag is an optional parameter to a regex that modifies its behavior of searching. A flag changes the default searching behaviour of a regular expression. It makes a regex search in a different way. A flag is denoted using a single lowercase alphabetic character.
 
@@ -69,13 +69,19 @@ A bracket expression is either a matching list expression or a non-matching list
 The character sequences "[.", "[=", and "[:" ( <left-square-bracket> followed by a <period>, <equals-sign>, or <colon>) shall be special inside a bracket expression and are used to delimit collating symbols, equivalence class expressions, and character class expressions. These symbols shall be followed by a valid expression and the matching terminating sequence ".]", "=]", or ":]", as described in the following items.
 
 ### Greedy and Lazy Match
-
+Expand the match as far as possible through the text.
+These are some examples of Greedy and Lazy Matching. * + {} - These characters can be used as a quantifier for Greedy or Lazy match.
+### Boundaries
 A word boundary, in most regex dialects, is a position between \w and \W (non-word char), or at the beginning or end of a string if it begins or ends (respectively) with a word character ( [0-9A-Za-z_] ). So, in the string "-12" , it would match before the 1 or after the 2.
 
-
 ### Back-references
+Backreferences match the same text as previously matched by a capturing group. Suppose you want to match a pair of opening and closing HTML tags, and the text in between. By putting the opening tag into a backreference, we can reuse the name of the tag for the closing tag. 
 
 ### Look-ahead and Look-behind
+
+Lookahead is used as an assertion in Python regular expressions to determine success or failure whether the pattern is ahead i.e to the right of the parser's current position. They don't match anything. Hence, they are called as zero-width assertions.
+
+Lookbehind, which is used to match a phrase that is preceded by a user specified text. Positive lookbehind is syntaxed like (? <=a)something which can be used along with any regex parameter. The above phrase matches any "something" word that is preceded by an "a" word.
 
 ## Author
 
