@@ -1,5 +1,5 @@
 # Regex Tutorial
-
+Welcome to a tutorial explaining a specific regex
 A regex, which is short for regular expression, is a sequence of characters that defines a specific search pattern. When included in code or search algorithms, regular expressions can be used to find certain patterns of characters within a string, or to find and replace a character or sequence of characters within a string. They are also frequently used to validate input.
 Email validation and passwords are a few areas of strings where Regex is widely used to define the constraints. Regular Expressions are provided under java.
 
@@ -7,9 +7,7 @@ Email validation and passwords are a few areas of strings where Regex is widely 
 ## Summary
 
 A regular expression can be a single character, or a more complicated pattern.
-
 Regular expressions can be used to perform all types of text search and text replace operations.
-
 For example, the following regular expression can be used to verify that user input is a valid email address:
 
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
@@ -68,6 +66,31 @@ The - character is treated as a literal character if it is the last or the first
 * [a-z]	Match any lowercase character from a to z.
 * {2,6} The preceding element or subexpression must occur between 2 and 6 times, inclusive.
 
+* ([a-z0-9_\.-]+)  Match a single character present in the list below [a-z0-9_\.-]+ matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+a-z matches a single character in the range between a (index 97) and z (index 122) (case sensitive)
+0-9 matches a single character in the range between 0 (index 48) and 9 (index 57) (case sensitive)
+_ matches the character _ with index 9510 (5F16 or 1378) literally (case sensitive)
+\. matches the character . with index 4610 (2E16 or 568) literally (case sensitive)
+- matches the character - with index 4510 (2D16 or 558) literally (case sensitive)
+
+* ([\da-z\.-]+)  Match a single character present in the list below [\da-z\.-]
++ matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+\d matches a digit (equivalent to [0-9])
+a-z matches a single character in the range between a (index 97) and z (index 122) (case sensitive)
+\. matches the character . with index 4610 (2E16 or 568) literally (case sensitive)
+- matches the character - with index 4510 (2D16 or 558) literally (case sensitive)
+
+* ([a-z\.]{2,6})  Match a single character present in the list below [\da-z([a-z\.]
+{2,6} matches the previous token between 2 and 6 times, as many times as possible, giving back as needed (greedy)
+\d matches a digit (equivalent to [0-9])
+a-z matches a single character in the range between a (index 97) and z (index 122) (case sensitive)
+([ matches a single character in the list ([ (case sensitive)
+a-z matches a single character in the range between a (index 97) and z (index 122) (case sensitive)
+\. matches the character . with index 4610 (2E16 or 568) literally (case sensitive)
+
+
+
+
 ### Flags
 A flag is an optional parameter to a regex that modifies its behavior of searching. A flag changes the default searching behaviour of a regular expression. It makes a regex search in a different way. A flag is denoted using a single lowercase alphabetic character.
 
@@ -97,4 +120,6 @@ Lookbehind, which is used to match a phrase that is preceded by a user specified
 ## Author
 
 I am Shelby Pham
-Here is my GitHub repo https://github.com/ncp9988/my-portfolio
+Here is my GitHub 
+*[Developer Profile](https://github.com/ncp9988)
+* [Repository](https://github.com/ncp9988/regexTutorial.git)
